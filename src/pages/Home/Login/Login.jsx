@@ -3,7 +3,7 @@ import auth from '../../../firebase.init';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { GoogleAuthProvider, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 
 
@@ -13,6 +13,9 @@ const Login = () => {
     const [password, setPassword] = useState('');
 
     const navigate = useNavigate();
+    const location = useLocation();
+  
+  const from = location.state?.from?.pathname || '/';
 
     const provider = new GoogleAuthProvider();
 
@@ -20,7 +23,7 @@ const Login = () => {
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 const user = userCredential.user;
-                navigate("/");
+                navigate(from,{replace:true});
             })
             .catch((error) => {
                 const errorMessage = error.message;
@@ -36,7 +39,7 @@ const Login = () => {
         signInWithPopup(auth, provider)
             .then((result) => {
                 const user = result.user;
-                navigate("/");
+                navigate(from,{replace:true});
 
             }).catch((error) => {
                 const errorMessage = error.message;
