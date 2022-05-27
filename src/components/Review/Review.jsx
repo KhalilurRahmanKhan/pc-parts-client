@@ -1,7 +1,7 @@
 function Review() {
     return (
         <div class="carousel w-full">
-            <div id="slide1" class="carousel-item relative w-full h-[40vh]">
+            <div id="slide1" class="carousel-item relative w-full h-[50vh]">
                 <div className="flex justify-center flex-col justify-center	 items-center w-full	">
                     <div class="avatar">
                         <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">

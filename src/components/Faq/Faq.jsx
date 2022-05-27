@@ -1,7 +1,8 @@
 function Faq() {
     return (
-        <div className="w-50 flex flex-col items-center m-10">
-            <div class="collapse collapse-plus ">
+        <div className="w-2/3 mx-auto m-10">
+            <h1 class="text-3xl m-10 text-center">Frequently Asked Question</h1>
+            <div class="collapse collapse-plus w-full bg-violet-500 border-2  ">
                 <input type="checkbox" />
                 <div class="collapse-title text-xl font-medium">
                     Click me to show/hide content
@@ -10,7 +11,7 @@ function Faq() {
                     <p>tabindex="0" attribute is necessary to make the div focusable</p>
                 </div>
             </div>
-            <div class="collapse collapse-plus">
+            <div class="collapse collapse-plus w-full bg-violet-500 border-2">
                 <input type="checkbox" />
                 <div class="collapse-title text-xl font-medium">
                     Click me to show/hide content
@@ -19,7 +20,7 @@ function Faq() {
                     <p>tabindex="0" attribute is necessary to make the div focusable</p>
                 </div>
             </div>
-            <div class="collapse collapse-plus">
+            <div class="collapse collapse-plus w-full bg-violet-500 border-2 border">
                 <input type="checkbox" />
                 <div class="collapse-title text-xl font-medium">
                     Click me to show/hide content
