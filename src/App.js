@@ -6,6 +6,9 @@ import Navbar from './components/Navbar/Navbar';
 import Register from './pages/Register/Register';
 import RequireAuth from './RequireAuth';
 import Purchase from './pages/Purchase/Purchase';
+import Dashboard from './pages/Dashboard/Dashboard';
+import MyProfile from './components/MyProfile/MyProfile';
+import MyOrders from './components/MyOrders/MyOrders';
 
 function App() {
   return (
@@ -15,7 +18,11 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
-        <Route path="purchase" element={<RequireAuth><Purchase/></RequireAuth>} />
+        <Route path="dashboard" element={<Dashboard />}>
+          <Route path="my-profile" element={<MyProfile />} />
+          <Route path="my-orders" element={<MyOrders />} />
+        </Route>
+        <Route path="purchase" element={<RequireAuth><Purchase /></RequireAuth>} />
       </Routes>
     </div>
   );
