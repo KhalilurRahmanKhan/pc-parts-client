@@ -1,7 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import { signOut } from 'firebase/auth';
+
 
 const Navbar = () => {
+  const [user, loading, error] = useAuthState(auth);
+  const navigate = useNavigate();
+
+  const handleSignOut = () => {
+    signOut(auth).then(() => {
+      navigate('login');
+    }).catch((error) => {
+      console.log(error);
+    });
+  }
   return (
     <div className="navbar bg-violet-500 text-white	">
       <div className="navbar-start">
@@ -18,13 +32,19 @@ const Navbar = () => {
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">
-        <li><Link to="/">Home</Link></li>
-            <li><Link to="purchase">Purchase</Link></li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="purchase">Purchase</Link></li>
         </ul>
       </div>
       <div className="navbar-end">
-        <Link to="register" className="btn btn-sm m-1 btn-primary">Register</Link>
-        <Link to="login" className="btn btn-sm m-1 btn-success">Login</Link>
+        {
+          user ? <button onClick={handleSignOut} className="btn btn-sm m-1 btn-error text-white">Logout</button> :
+            <>
+              <Link to="register" className="btn btn-sm m-1 btn-primary text-white">Register</Link>
+              <Link to="login" className="btn btn-sm m-1 btn-success text-white">Login</Link>
+            </>
+
+        }
       </div>
     </div>
   );
