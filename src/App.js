@@ -10,6 +10,7 @@ import Dashboard from './pages/Dashboard/Dashboard';
 import MyProfile from './components/MyProfile/MyProfile';
 import MyOrders from './components/MyOrders/MyOrders';
 import AddReview from './components/AddReview/AddReview';
+import Payment from './pages/Payment/Payment';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
+        <Route path="dashboard/my-orders/payment" element={<Payment />} />
         <Route path="dashboard" element={<Dashboard />}>
           <Route path="my-profile" element={<MyProfile />} />
           <Route path="my-orders" element={<MyOrders />} />

@@ -27,6 +27,23 @@ const Purchase = () => {
                             <p className='w-1/3'><b>Quantity  :</b></p>
                             <p className='w-2/3'><button onClick={handleMinus} className='px-3 m-1 text-white rounded bg-violet-500 cursor-pointer '>-</button><input value={quantity} className='w-[30px] text-center border-2' type="text" /> <span onClick={handlePlus} className='px-3 cursor-pointer   text-white rounded bg-violet-500'>+</span></p>
                         </div>
+                        <small className='text-error'>kjhglg</small>
+                    </div>
+                    <div className='flex-1 w-1/2'>
+
+                    <div className='flex'>
+                            <p className='w-1/3'><b>jkgjyh  :</b></p>
+                            <p className='w-2/3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, velit.</p>
+                        </div>
+                    </div>
+                </div>
+                  <div className='flex w-full m-10'>
+                    <div className='flex-1 w-1/2'>
+                        <div className='flex'>
+                            <p className='w-1/3'><b>Quantity  :</b></p>
+                            <p className='w-2/3'><button onClick={handleMinus} className='px-3 m-1 text-white rounded bg-violet-500 cursor-pointer '>-</button><input value={quantity} className='w-[30px] text-center border-2' type="text" /> <span onClick={handlePlus} className='px-3 cursor-pointer   text-white rounded bg-violet-500'>+</span></p>
+                        </div>
+                        <small className='text-error'>kjhglg</small>
                     </div>
                     <div className='flex-1 w-1/2'>
 

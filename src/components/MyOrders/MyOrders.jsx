@@ -1,6 +1,7 @@
 import React from 'react';
 import { confirmAlert } from 'react-confirm-alert'; // Import
 import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
+import { Link } from 'react-router-dom';
 import './myorders.css';
 
 
@@ -39,7 +40,10 @@ const MyOrders = () => {
                         <td>Cy Ganderton</td>
                         <td>Quality Control Specialist</td>
                         <td>Blue</td>
-                        <td><button onClick={handleConfirmation} className='btn btn-sm btn-error'>Cancel</button></td>
+                        <td>
+                            <button  className='btn btn-sm btn-error'>Cancel</button>
+                            <Link to="payment" className='btn btn-sm btn-primary'>Payment</Link>
+                        </td>
                     </tr>
 
                 </tbody>
