@@ -27,6 +27,7 @@ const Navbar = () => {
             <li><Link to="/">Home</Link></li>
             <li><Link to="purchase">Purchase</Link></li>
             <li><Link to="dashboard">Dashboard</Link></li>
+            <li><Link to="my-portfolio">My Portfolio</Link></li>
           </ul>
         </div>
         <Link to="" className="btn btn-ghost normal-case text-xl">{user ? user.displayName : "PC Parts"}</Link>
@@ -36,6 +37,8 @@ const Navbar = () => {
           <li><Link to="/">Home</Link></li>
           <li><Link to="purchase">Purchase</Link></li>
           <li><Link to="dashboard">Dashboard</Link></li>
+          <li><Link to="my-portfolio">My Portfolio</Link></li>
+
         </ul>
       </div>
       <div className="navbar-end">
