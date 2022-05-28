@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import auth from '../../../firebase.init';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { GoogleAuthProvider, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
+import auth from '../../firebase.init';
 
 
 

@@ -5,8 +5,11 @@ function Tools() {
                 <img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" className="rounded-xl" />
             </figure>
             <div className="card-body items-center text-center">
-                <h2 className="card-title">Shoes!</h2>
+                <h2 className="card-title">Name!</h2>
                 <p>If a dog chews shoes whose shoes does he choose?</p>
+                <small>min order quan</small>
+                <small>Available quan</small>
+                <small>price</small>
                 <div className="card-actions">
                     <button className="btn btn-primary">Buy Now</button>
                 </div>
