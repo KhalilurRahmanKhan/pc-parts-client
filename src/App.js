@@ -11,6 +11,10 @@ import MyProfile from './components/MyProfile/MyProfile';
 import MyOrders from './components/MyOrders/MyOrders';
 import AddReview from './components/AddReview/AddReview';
 import Payment from './pages/Payment/Payment';
+import ManageOrders from './components/ManageOrders/ManageOrders';
+import AddProduct from './components/AddProduct/AddProduct';
+import MakeAdmin from './components/MakeAdmin/MakeAdmin';
+import ManageProducts from './components/ManageProducts/ManageProducts';
 
 function App() {
   return (
@@ -25,6 +29,10 @@ function App() {
           <Route path="my-profile" element={<MyProfile />} />
           <Route path="my-orders" element={<MyOrders />} />
           <Route path="add-review" element={<AddReview />} />
+          <Route path="manage-orders" element={<ManageOrders />} />
+          <Route path="add-product" element={<AddProduct />} />
+          <Route path="make-admin" element={<MakeAdmin />} />
+          <Route path="manage-products" element={<ManageProducts />} />
         </Route>
         <Route path="purchase" element={<RequireAuth><Purchase /></RequireAuth>} />
       </Routes>
