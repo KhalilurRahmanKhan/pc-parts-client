@@ -12,7 +12,7 @@ function AddReview() {
                     <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" />
                 </div>
                 <div className="form-control">
-                    <textarea rows="5" type="text" placeholder="Review" className=" input input-bordered" ></textarea>
+                    <textarea rows="4" type="text" placeholder="Review" className=" textarea textarea-bordered" ></textarea>
                 </div>
 
                 <button className="btn btn-accent btn-sm">Add</button>
