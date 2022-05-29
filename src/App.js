@@ -17,6 +17,7 @@ import MakeAdmin from './components/MakeAdmin/MakeAdmin';
 import ManageProducts from './components/ManageProducts/ManageProducts';
 import MyPortfolio from './pages/MyPortfolio/MyPortFolio';
 import NotFound from './pages/NotFound/Notfound';
+import Blogs from './pages/Blogs/Blogs';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
           <Route path="manage-products" element={<ManageProducts />} />
         </Route>
         <Route path="my-portfolio" element={<MyPortfolio />} />
+        <Route path="blogs" element={<Blogs />} />
         <Route path="purchase/:id" element={<RequireAuth><Purchase /></RequireAuth>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
