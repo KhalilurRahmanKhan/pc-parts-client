@@ -13,7 +13,7 @@ function Payment() {
             </div>
             <div className="form-control">
                
-                <input type="password"  placeholder="password" className="input input-bordered input-sm" />
+                <input type="text"  placeholder="card number" className="input input-bordered input-sm" />
             </div>
             
                 <button  className="btn btn-accent btn-sm">Pay</button>
