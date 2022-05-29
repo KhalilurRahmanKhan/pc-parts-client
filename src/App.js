@@ -27,7 +27,7 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="dashboard/my-orders/payment" element={<Payment />} />
-        <Route path="dashboard" element={<Dashboard />}>
+        <Route path="dashboard" element={<RequireAuth><Dashboard /></RequireAuth>}>
           <Route path="my-profile" element={<MyProfile />} />
           <Route path="my-orders" element={<MyOrders />} />
           <Route path="add-review" element={<AddReview />} />
@@ -37,7 +37,7 @@ function App() {
           <Route path="manage-products" element={<ManageProducts />} />
         </Route>
         <Route path="my-portfolio" element={<MyPortfolio />} />
-        <Route path="purchase" element={<RequireAuth><Purchase /></RequireAuth>} />
+        <Route path="purchase/:id" element={<RequireAuth><Purchase /></RequireAuth>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

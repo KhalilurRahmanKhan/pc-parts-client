@@ -39,6 +39,20 @@ const Login = () => {
         signInWithPopup(auth, provider)
             .then((result) => {
                 const user = result.user;
+                const email = user.email;
+                console.log(email);
+                console.log(user);
+
+                fetch(`http://localhost:5000/user/${email}`, {
+                    method: "put",
+                    headers: {
+                      "Content-type": "application/json",
+                    },
+                    body: JSON.stringify({  email }),
+                  })
+                    .then(res => res.json())
+                    .then(data => console.log(data))
+
                 navigate(from,{replace:true});
 
             }).catch((error) => {
