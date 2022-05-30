@@ -28,7 +28,7 @@ function Payment() {
 
 
      
-    }, []);
+    }, [params.id,params.orderId]);
 
 
    

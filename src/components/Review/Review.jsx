@@ -15,7 +15,7 @@ function Review() {
         <Carousel>
             {
                 reviews.map(review =>
-                    <div className="w-2/3 h-[30vh] bg-violet-500 text-white mx-auto rounded-lg pt-10">
+                    <div className="w-2/3 h-[55vh] bg-violet-500 text-white mx-auto rounded-lg pt-20">
                         <h1 className="text-2xl mb-3">{review.name}</h1>
 
                         <p>  {
