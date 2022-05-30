@@ -12,7 +12,7 @@ function AddProduct() {
     const [price, setPrice] = useState('');
 
     const handleAdd = () => {
-        fetch('http://localhost:5000/product/add', {
+        fetch('https://guarded-shelf-82309.herokuapp.com/product/add', {
           method: "POST",
           headers: {
             "Content-type": "application/json",

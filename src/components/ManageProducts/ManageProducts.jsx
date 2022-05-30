@@ -5,14 +5,14 @@ import { toast, ToastContainer } from "react-toastify";
 function ManageProducts() {
     const [tools, setTools] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:5000/product/all")
+        fetch("https://guarded-shelf-82309.herokuapp.com/product/all")
             .then(res => res.json())
             .then(data => setTools(data))
     }, [tools]);
 
 
     const handleDelete = (id)=>{
-        fetch('http://localhost:5000/product/delete/'+id, {
+        fetch('https://guarded-shelf-82309.herokuapp.com/product/delete/'+id, {
             method: "Delete",
           })
           .then(res => res.json())

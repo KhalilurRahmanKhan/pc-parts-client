@@ -22,7 +22,7 @@ const Register = () => {
                         .then(() => {
 
 
-                            fetch(`http://localhost:5000/user/${email}`, {
+                            fetch(`https://guarded-shelf-82309.herokuapp.com/user/${email}`, {
                                 method: "put",
                                 headers: {
                                   "Content-type": "application/json",

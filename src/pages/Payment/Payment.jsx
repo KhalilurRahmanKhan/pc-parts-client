@@ -18,11 +18,11 @@ function Payment() {
     const params = useParams();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/product/purchase/${params.id}`)
+        fetch(`https://guarded-shelf-82309.herokuapp.com/product/purchase/${params.id}`)
             .then(res => res.json())
             .then(data => setProduct(data))
 
-        fetch(`http://localhost:5000/order/purchase/${params.orderId}`)
+        fetch(`https://guarded-shelf-82309.herokuapp.com/order/purchase/${params.orderId}`)
             .then(res => res.json())
             .then(data => setOrder(data))
 

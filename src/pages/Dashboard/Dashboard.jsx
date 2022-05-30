@@ -14,7 +14,7 @@ const Dashboard = () => {
   }
 
   useEffect(()=>{
-      fetch("http://localhost:5000/user/"+authUser.email)
+      fetch("https://guarded-shelf-82309.herokuapp.com/user/"+authUser.email)
       .then(res=>res.json())
       .then(data=>checkRole(data))
     },[authUser.email]);

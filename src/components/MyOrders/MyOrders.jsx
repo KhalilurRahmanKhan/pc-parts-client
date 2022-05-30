@@ -15,14 +15,14 @@ const MyOrders = () => {
     const [user] = useAuthState(auth);
 
     useEffect(()=>{
-        fetch("http://localhost:5000/order/"+user.email)
+        fetch("https://guarded-shelf-82309.herokuapp.com/order/"+user.email)
         .then(res=>res.json())
         .then(data=>setOrders(data))
       },[user.email,orders]);
 
 
       const handleDelete = (id)=>{
-        fetch('http://localhost:5000/order/delete/'+id, {
+        fetch('https://guarded-shelf-82309.herokuapp.com/order/delete/'+id, {
             method: "Delete",
           })
           .then(res => res.json())

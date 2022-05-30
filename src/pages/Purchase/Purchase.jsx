@@ -34,7 +34,7 @@ const Purchase = () => {
 
 
     const handleOrder = () => {
-        fetch('http://localhost:5000/order/add', {
+        fetch('https://guarded-shelf-82309.herokuapp.com/order/add', {
           method: "POST",
           headers: {
             "Content-type": "application/json",
@@ -54,7 +54,7 @@ const Purchase = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/product/${id}`)
+        fetch(`https://guarded-shelf-82309.herokuapp.com/product/${id}`)
             .then(res => res.json())
             .then(data => setTool(data))
 

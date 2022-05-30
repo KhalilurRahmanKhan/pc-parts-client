@@ -5,7 +5,7 @@ function MakeAdmin() {
     const [users, setUsers] = useState([]);
     useEffect
         (() => {
-            fetch("http://localhost:5000/user")
+            fetch("https://guarded-shelf-82309.herokuapp.com/user")
                 .then(res => res.json())
                 .then(data => setUsers(data))
         }, [users]);
@@ -13,7 +13,7 @@ function MakeAdmin() {
     const handleMakeAdmin = (e) => {
         e.preventDefault();
         let userEmail = e.target.userEmail.value;
-        fetch(`http://localhost:5000/user/${userEmail}`, {
+        fetch(`https://guarded-shelf-82309.herokuapp.com/user/${userEmail}`, {
             method: "put",
             headers: {
                 "Content-type": "application/json",

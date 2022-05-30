@@ -9,7 +9,7 @@ function CheckoutForm({price}) {
     const [clientSecret,setClientSecret] = useState('');
 
     useEffect(()=>{
-        fetch('http://localhost:5000/create-payment-intend', {
+        fetch('https://guarded-shelf-82309.herokuapp.com/create-payment-intend', {
           method: "POST",
           headers: {
             "Content-type": "application/json",

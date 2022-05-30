@@ -12,7 +12,7 @@ const MyProfile = () => {
     const [user, loading, error] = useAuthState(auth);
 
     const handleAdd = ()=>{
-        fetch(`http://localhost:5000/user/${user.email}`, {
+        fetch(`https://guarded-shelf-82309.herokuapp.com/user/${user.email}`, {
             method: "put",
             headers: {
               "Content-type": "application/json",

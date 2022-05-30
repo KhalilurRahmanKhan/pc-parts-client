@@ -15,7 +15,7 @@ function AddReview() {
 let rating = e.target.rating.value || 5;
 let review = e.target.review.value;
 
-    fetch('http://localhost:5000/review/add', {
+    fetch('https://guarded-shelf-82309.herokuapp.com/review/add', {
       method: "POST",
       headers: {
         "Content-type": "application/json",

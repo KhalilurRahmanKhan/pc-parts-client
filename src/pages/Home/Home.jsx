@@ -10,7 +10,7 @@ import Vision from '../../components/Vision/Vision';
 const Home = () => {
     const [tools,setTools] = useState([]);
     useEffect(()=>{
-        fetch("http://localhost:5000/product")
+        fetch("https://guarded-shelf-82309.herokuapp.com/product")
         .then(res=>res.json())
         .then(data=>setTools(data))
       },[tools]);
