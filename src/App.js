@@ -27,7 +27,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
-        <Route path="dashboard/my-orders/payment" element={<Payment />} />
+        <Route path="dashboard/my-orders/payment/:id/:orderId" element={<Payment />} />
         <Route path="dashboard" element={<RequireAuth><Dashboard /></RequireAuth>}>
           <Route path="my-profile" element={<MyProfile />} />
           <Route path="my-orders" element={<MyOrders />} />

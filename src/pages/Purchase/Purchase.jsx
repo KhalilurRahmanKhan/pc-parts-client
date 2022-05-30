@@ -60,6 +60,8 @@ const Purchase = () => {
 
         setQuantity(parseInt(tool.minQuantity));
     }, [id, tool.minQuantity]);
+
+    
     return (
         <div>
             <div class="hero w-full">

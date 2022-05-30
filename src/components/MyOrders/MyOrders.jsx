@@ -20,7 +20,6 @@ const MyOrders = () => {
         .then(data=>setOrders(data))
       },[user.email,orders]);
 
-      console.log(orders);
 
       const handleDelete = (id)=>{
         fetch('http://localhost:5000/order/delete/'+id, {
@@ -71,7 +70,7 @@ const MyOrders = () => {
                             <td>{order.address}</td>
                             <td>
                                 <button onClick={()=>handleConfirmation(order._id)}  className='btn btn-sm btn-error'>Cancel</button>
-                                <Link to="payment" className='btn btn-sm btn-primary'>Payment</Link>
+                                {/* <Link to={`payment/${order.id}/${order._id}`} className='btn btn-sm btn-primary'>Payment</Link> */}
                             </td>
                         </tr>
                             )

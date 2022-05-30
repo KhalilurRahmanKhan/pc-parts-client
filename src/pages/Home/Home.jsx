@@ -17,12 +17,12 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
+                <Summary></Summary>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5 place-items-center m-10	">
                 {
                     tools.map(tool=><Tools key={tool._id} tool={tool}></Tools>)
                 }
             </div>
-            <Summary></Summary>
             <Review></Review>
             <Vision />
             <Faq></Faq>

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Vision = () => {
     return (
-        <div className="hero min-h-screen bg-base-200">
+        <div className="hero min-h-[50vh] bg-base-200">
             <div className="hero-content flex-col lg:flex-row-reverse w-2/3">
                 <img src="https://api.lorem.space/image/movie?w=260&h=400" className="max-w-sm rounded-lg shadow-2xl" />
                 <div>

@@ -43,7 +43,7 @@ const Dashboard = () => {
               </> :
               <>
 
-                <li><Link to="manage-orders">Manage orders</Link></li>
+                {/* <li><Link to="manage-orders">Manage orders</Link></li> */}
                 <li><Link to="add-product">Add product</Link></li>
                 <li><Link to="make-admin">Make admin</Link></li>
                 <li><Link to="manage-products">Manage products</Link></li>
